@@ -5,7 +5,7 @@ You can find the design made for Reddit on the folder: **RedditStylus**
 
 ## *Caring for a Normal Pet (HTML + CSS)*
 
-A text-based interactive adventure game built with pure HTML where you must care for a mysterious creature that may not be as "normal" as it seems. Find it in the **coyaPet** folder
+A text-based interactive adventure game built with pure HTML where you must care for a mysterious creature that may not be as "normal" as it seems. Find it in the **coyaPet** folder. Please, to test it, go to the **coyaPet** folder on the commandline.
 
 ### Story
 
