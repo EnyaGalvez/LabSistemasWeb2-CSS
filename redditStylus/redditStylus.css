@@ -1,0 +1,224 @@
+/* Lab 2: CSS
+   Fuentes: Lobster (títulos) y Times New Roman
+   Paleta de colores retro vintage oscuro
+   Enya Gálvez - 24693
+   */
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+:root {
+    --retro-naranja: #FF6B35;
+    --retro-mostaza: #F7B731;
+    --retro-verde-agua: #5DADE2;
+    --retro-rosa: #E84393;
+    --retro-beige: #F5E6D3;
+    --retro-marron: #8B4513;
+    --retro-azul-oscuro: #0e1113;
+    
+    --fuente-fancy: 'Lobster', cursive;
+    --fuente-texto: 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--retro-azul-beige);
+    background-color: var(--retro-verde-agua);
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            #70bcb750 10px,
+            #542f3d40 10px,
+            #5DADE250 20px
+        );
+}
+
+h1, h4 {
+    font-family: var(--fuente-fancy);
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: var(--retro-naranja);
+}
+
+h1 {
+    font-size: 4rem;
+    color: var(--retro-mostaza);
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 3rem;
+    color: var(--retro-rosa);
+}
+
+h3 {
+    font-size: 2.5rem;
+    color: var(--retro-beige);
+}
+
+h4 {
+    font-size: 2rem;
+    color: var(--retro-naranja);
+}
+
+h5 {
+    font-size: 1.5rem;
+    color: var(--retro-beige);
+}
+
+h6 {
+    font-size: 1.2rem;
+    color: var(--retro-beige);
+}
+
+p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+}
+
+p, span, div {
+    color: #ffffff !important;
+}
+
+a {
+    color: var(--retro-verde-agua);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--retro-rosa);
+    border-bottom-color: var(--retro-rosa);
+    background-color: #E76E9B80;
+    border-radius: 16px;
+}
+
+/* Posts individuales */
+shreddit-feed,
+shreddit-post,
+[data-testid="post-container"],
+.Post,
+article,
+faceplate-tracker {
+    background-color: var(--retro-azul-oscuro) !important;
+    margin-bottom: 15px !important;
+    border-radius: 10px !important;
+}
+
+/* Comentarios */
+shreddit-comments-page-ad-inset, [id*="comment-tree"],
+#-post-rtjson-content,
+shreddit-comment-tree, section[aria-label="Comments"] {
+    background-color: var(--retro-azul-oscuro) !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    margin: 15px 0 !important;
+    border: 1px solid #a4aeaf;
+}
+
+[slot="comment-box"],
+shreddit-async-loader[bundlename*="comment_box"],
+.Comment__commentBox {
+    background-color: var(--retro-oscuro) !important;
+    border-radius: 15px !important;
+    padding: 15px !important;
+    margin-bottom: 20px !important;
+    border: 3px solid var(--retro-naranja) !important;
+}
+
+/* Sidebar */
+[id*="left-sidebar"],
+shreddit-app > nav,
+nav[aria-label="Main menu"],
+aside[class*="sidebar"],
+[class*="LeftNav"] {
+    border-right: 5px solid var(--retro-naranja) !important;
+}
+
+[id*="left-sidebar"] a:hover,
+nav[aria-label="Main menu"] a:hover {
+    background-color: var(--retro-rosa) !important;
+    color: white !important;
+    border-radius: 10px !important;
+}
+
+/* Botones */
+
+button, .btn {
+    font-family: var(--fuente-fancy);
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border: 3px solid var(--retro-verde-agua);
+    background-color: var(--retro-mostaza);
+    color: var(--retro-azul-oscuro);
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 4px 4px 0px var(--retro-verde-agua);
+}
+
+button:hover, .btn:hover {
+    background-color: var(--retro-verde-agua);
+    color: white;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0px var(--retro-marron);
+}
+
+/* Tablas */
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--retro-mostaza);
+    color: var(--retro-azul-oscuro);
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    padding: 1rem;
+    text-align: left;
+}
+
+td {
+    padding: 0.8rem;
+    border-bottom: 2px solid var(--retro-beige);
+}
+
+
+/* Imagenes */
+article img,
+.Post img,
+[data-testid="post-container"] img,
+.thing img:not([class*="icon"]):not([class*="avatar"]) {
+    border: 5px solid var(--retro-naranja) !important;
+    border-radius: 10px !important;
+    box-shadow: 6px 6px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 5px solid var(--retro-naranja);
+    border-radius: 10px;
+}
+
+/* Excluir imagenes específicas */
+img[class*="avatar"], img[class*="icon"], img[class*="profile"], img[class*="emoji"], img[class*="badge"], 
+img[alt*="avatar"], img[src*="avatar"], img[src*="icon"], img[src*="emoji"], img[src*="badge"] {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Votos */
+shreddit-post[score]::part(score),
+[aria-label*="upvote"],
+[aria-label*="downvote"] {
+    color: var(--retro-mostaza) !important;
+    font-weight: bold !important;
+}
